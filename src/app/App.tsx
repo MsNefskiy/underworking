@@ -1,6 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar, useColorScheme } from 'react-native';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { RootStack } from './router';
 
 function App() {
@@ -8,9 +7,7 @@ function App() {
 
   return (
     <NavigationContainer>
-      <SafeAreaProvider>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      </SafeAreaProvider>
+      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <RootStack />
     </NavigationContainer>
   );
